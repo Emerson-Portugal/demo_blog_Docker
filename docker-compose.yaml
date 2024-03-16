@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  #Django App
+
+  backend_auth:
+    container_name: django_demo_api_app
+    build: .
+    volumes:
+      - .:/app
+    ports: 
+      - 8000:8000
+    depends_on:
+      - db_auth
+
+  #PostgreSQL
+
+  db_auth:
+    image: postgres
+    container_name: django_demo_api_postgresql
+    restart: always
+    environment:
+      POSTGRES_DB: postgresql_demo_db
+      POSTGRES_USER: postgresql
+      POSTGRES_PASSWORD: postgresql
+    ports: 
+      - 5432:5432
+    volumes:
+      - .dbdata:/var/lib/postgresql
