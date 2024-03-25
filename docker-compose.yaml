@@ -10,11 +10,11 @@ services:
     ports: 
       - 8000:8000
     depends_on:
-      - db_auth
+      - db
 
   #PostgreSQL
 
-  db_auth:
+  db:
     image: postgres
     container_name: django_demo_api_postgresql
     restart: always
