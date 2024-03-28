@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'postgresql_demo_db',
         'USER':'postgresql',
         'PASSWORD':'postgresql',
-        'HOST':'db',
+        'HOST':'db_auth',
         'PORT':'5432'
     }
 }
