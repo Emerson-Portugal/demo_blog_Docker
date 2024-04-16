@@ -91,7 +91,7 @@ DATABASES = {
         'PORT':'5432'
     }
 }
-
+##funciona
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 # Password validation
